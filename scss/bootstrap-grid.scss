@@ -1,0 +1,62 @@
+/*!
+ * Bootstrap Grid v4.5.3 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+//
+// Grid Options
+//
+// To avoid your options getting overridden by an update,
+// copy and paste the below options to your own sass file
+// and include it before this file.
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+// Вы можете присваивать значение по-умолчанию переменным, у которых еще нет значения, добавив метку !default в конце значения. В таком случае, если переменная уже имела значение, то оно не изменится; если же переменная пуста, ей будет присвоено новое указанное значение.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1120px,
+) !default;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1080px,
+) !default;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 20px !default;
+
+// END of Grid Options
+
+// Bootstrap file imports
+@import "bootstrap-grid/functions";
+@import "bootstrap-grid/variables";
+
+@import "bootstrap-grid/mixins/deprecate";
+@import "bootstrap-grid/mixins/breakpoints";
+@import "bootstrap-grid/mixins/grid-framework";
+@import "bootstrap-grid/mixins/grid";
+
+@import "bootstrap-grid/grid";
+@import "bootstrap-grid/utilities/display";
+@import "bootstrap-grid/utilities/flex";
+@import "bootstrap-grid/utilities/spacing";
