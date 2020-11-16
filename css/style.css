@@ -4231,6 +4231,10 @@ img {
   margin-top: 83px;
 }
 
+.h1 span {
+  white-space: nowrap;
+}
+
 .h2,
 .h3 {
   margin: 0;
@@ -4292,11 +4296,17 @@ img {
   border: 0;
   cursor: pointer;
   position: fixed;
-  top: 36px;
+  top: 30px;
   left: 40px;
+  width: 50px;
+  height: 42px;
+  background-color: transparent;
 }
 
-.burger, .burger::before, .burger::after {
+.burger span,
+.burger span::before,
+.burger span::after {
+  display: block;
   content: "";
   width: 50px;
   height: 6px;
@@ -4307,33 +4317,34 @@ img {
   transition: 0.5s;
 }
 
-.burger::before, .burger::after {
+.burger span::before,
+.burger span::after {
   left: 0;
   position: absolute;
 }
 
-.burger::before {
-  top: -12px;
+.burger span::before {
+  top: 0;
 }
 
-.burger::after {
-  top: 12px;
+.burger span::after {
+  top: 36px;
 }
 
-.burger.active {
-  background: rgba(0, 0, 0, 0);
+.burger.active span {
+  background-color: rgba(0, 0, 0, 0);
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
 }
 
-.burger.active::before {
-  top: 0;
+.burger.active span::before {
+  top: 18px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.burger.active::after {
-  top: 0;
+.burger.active span::after {
+  top: 18px;
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
   -webkit-box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
@@ -4786,5 +4797,11 @@ nav a:active {
   }
   .header p {
     padding: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .h1 span {
+    white-space: unset;
   }
 }

@@ -1,10 +1,11 @@
-document.querySelector(".burger").addEventListener("click", (e) => {
-  e.target.classList.toggle("active");
-  document.querySelector("nav").classList.toggle("active");
-  if (!document.querySelector("nav").classList.contains("active"))
-    document.querySelector("nav").classList.add("notactive");
-  else document.querySelector("nav").classList.remove("notactive");
+const burger = document.querySelector(".burger");
+const nav = document.querySelector("nav");
+burger.addEventListener("click", (e) => {
+  burger.classList.toggle("active");
+  nav.classList.toggle("active");
+  if (!nav.classList.contains("active")) nav.classList.add("notactive");
+  else nav.classList.remove("notactive");
 });
 window.addEventListener("resize", (e) => {
-  document.querySelector("nav").classList.remove("notactive");
+  nav.classList.remove("notactive");
 });
